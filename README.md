@@ -1,0 +1,2 @@
+# TCC-Deteccao-Deepfake-Audio
+Trabalho de Conclusão de Curso:  DETECÇÃO DE ÁUDIOS FALSOS ATRAVÉS DE WAVELETS E REDES NEURAIS CONVOLUCIONAIS
