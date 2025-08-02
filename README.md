@@ -1,8 +1,22 @@
-# Detecção de Deepfakes de Áudio com Wavelets e CNNs
+# Detecção de Deepfakes de Áudio com Wavelets e Redes Neurais Convolucionais
 
-Este repositório contém os códigos-fonte desenvolvidos para o Trabalho de Conclusão de Curso "Detecção de Áudios Falsos Através de Wavelets e Redes Neurais Convolucionais", do curso de Engenharia da Computação da Universidade Federal do Ceará (UFC), Campus Sobral.
+Este repositório contém os códigos-fonte desenvolvidos para o Trabalho de Conclusão de Curso de mesmo nome, do curso de Engenharia da Computação da Universidade Federal do Ceará (UFC), Campus Sobral.
 
-O objetivo do projeto é avaliar uma metodologia que combina a Transformada Wavelet Contínua (CWT) para extração de características e a arquitetura de Rede Neural Convolucional (CNN) MobileNet para a classificação de áudios como reais ou falsos.
+## Sobre o Trabalho
+
+O avanço da Inteligência Artificial permitiu a criação de *deepfakes* de áudio de alta fidelidade, representando um risco crescente para a segurança da informação. Este trabalho desenvolve e avalia uma metodologia que combina processamento de sinais e aprendizado profundo para detectar essas manipulações.
+
+A abordagem consiste em transformar sinais de áudio em representações visuais 2D (escalogramas) por meio da Transformada Wavelet Contínua (CWT) e, em seguida, utilizar uma Rede Neural Convolucional (CNN) pré-treinada (MobileNet) para classificar essas imagens como reais ou falsas.
+
+### Principais Resultados
+
+O estudo comparou três famílias de *wavelets* e concluiu que a escolha da *wavelet* é um hiperparâmetro crucial que define não apenas a performance, mas também o perfil de erro do detector.
+
+| Família de Wavelet | Acurácia Final | F1-Score Final | Perfil do Modelo                                      |
+| ------------------ | -------------- | -------------- | ----------------------------------------------------- |
+| **Morlet** | **84,01%** | **84,24%** | Equilibrado, melhor desempenho geral.                 |
+| **Complex Morlet** | 82,08%         | 84,11%         | "Vigilante", com a maior capacidade de detecção (95% de Recall). |
+| **Mexican Hat** | 67,65%         | 73,81%         | Inadequado, com forte viés para falsos positivos.     |
 
 ---
 
@@ -58,3 +72,7 @@ Execute o notebook **`MobileNetV2.ipynb`**.
 * **Execução:** Este notebook também deve ser executado **três vezes**, uma para cada conjunto de escalogramas gerado.
 * **Saídas:** Ao final da execução, todos os resultados, incluindo o modelo treinado (`.keras`), o histórico de treinamento (`.json`), os arrays de predição (`.npy`) e os gráficos de desempenho, serão salvos na pasta `Training_Results_MobileNet_Accuracy` dentro do respectivo diretório da wavelet.
 
+---
+  note         = {Trabalho de Conclusão de Curso em Engenharia da Computação}
+}
+```
