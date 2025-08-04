@@ -25,7 +25,7 @@ O estudo comparou três famílias de *wavelets* e concluiu que a escolha da *wav
 O projeto está dividido em dois notebooks principais que devem ser executados em sequência:
 
 1.  `Escalogramas.ipynb`: Responsável pelo pré-processamento dos áudios e geração dos escalogramas.
-2.  `MobileNetV2.ipynb`: Responsável pelo treinamento, validação e teste do modelo de CNN.
+2.  `MobileNet.ipynb`: Responsável pelo treinamento, validação e teste do modelo de CNN.
 
 ---
 
